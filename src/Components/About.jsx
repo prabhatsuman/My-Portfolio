@@ -31,7 +31,7 @@ const About = () => {
   }, []);
 
   return (
-    <div id="about" className="p-10 md:p-24 text-white">
+    <div id="about" className="p-6 md:p-24 text-white">
       {/* Static Heading */}
       <h1
         className="text-2xl md:text-4xl font-bold "

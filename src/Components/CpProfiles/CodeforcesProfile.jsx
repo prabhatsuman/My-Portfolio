@@ -15,30 +15,30 @@ const CodeforcesProfile = () => {
   };
 
   return (
-    <div className="flex bg-[#0c0e19] shadow-xl shadow-slate-900 rounded-2xl bg-opacity-40 p-6 text-white relative">
-      <div className="flex flex-col gap-4">
-        <h2 className="text-2xl font-semibold">{data.username}</h2>
-        <p className="text-cyan-300">
+    <div className="flex bg-[#0c0e19] shadow-xl shadow-slate-900 rounded-2xl bg-opacity-40 md:p-6 text-white relative">
+      <div className="flex flex-col gap-0.5 md:gap-4 mb-1">
+        <h2 className="text-sm md:text-2xl font-semibold">{data.username}</h2>
+        <p className="text-cyan-300 max-md:text-sm">
           {data.title} (max: {data.maxTitle})
         </p>
         <p>
-          <span className="font-bold">Contest Rating:</span> {data.contestRating}
+          <span className="max-md:text-xs md:font-bold">Contest Rating:</span> {data.contestRating}
         </p>
         <p>
-          <span className="font-bold">Max Rating:</span> {data.maxContestRating}
+          <span className="max-md:text-xs md:font-bold">Max Rating:</span> {data.maxContestRating}
         </p>
         <p>
-          <span className="font-bold">Rated Contests:</span> {data.ratedContests}
+          <span className="max-md:text-xs md:font-bold">Rated Contests:</span> {data.ratedContests}
         </p>
         <p>
-          <span className="font-bold">Problems Solved:</span> {data.problemsSolved}
+          <span className="max-md:text-xs md:font-bold">Problems Solved:</span> {data.problemsSolved}
         </p>
 
         <a
           href="https://codeforces.com/profile/Prabhat_007"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-400 hover:underline mt-auto flex items-center gap-2"
+          className="text-blue-400 hover:underline mt-auto flex items-center gap-2 max-md:text-xs"
         >
           <FaExternalLinkAlt /> View Profile
         </a>

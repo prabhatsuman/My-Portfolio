@@ -14,36 +14,36 @@ const LeetCodeProfile = () => {
   };
 
   return (
-    <div className="flex bg-[#0c0e19] shadow-xl shadow-slate-900 rounded-2xl bg-opacity-40 p-6 text-white relative">
-      <div className="flex flex-col gap-4">
-        <h2 className="text-2xl font-semibold">{data.username}</h2>
-        <p className="text-orange-500">
-           {data.title}
+    <div className="flex bg-[#0c0e19] shadow-xl shadow-slate-900 bg-opacity-40 rounded-2xl md:p-6 text-white relative">
+      <div className="flex flex-col gap-0.5 md:gap-4 mb-1">
+        <h2 className="md:text-2xl text-sm font-semibold">{data.username}</h2>
+        <p className="text-orange-500 flex items-center gap-1">
+          {data.title} 
         </p>
         <p>
-          <span className="font-bold">Current Rating:</span> {data.currentRating}
+          <span className="max-md:text-xs md:font-bold">Current Rating:</span> {data.currentRating}
         </p>
         <p>
-          <span className="font-bold">Max Rating:</span> {data.maxRating}
+          <span className="max-md:text-xs md:font-bold">Max Rating:</span> {data.maxRating}
         </p>
         <p>
-          <span className="font-bold">Contests Given:</span> {data.contestsGiven}
+          <span className="max-md:text-xs md:font-bold">Contests Given:</span> {data.contestsGiven}
         </p>
         <p>
-          <span className="font-bold">Problems Solved:</span> {data.problemsSolved}
+          <span className="max-md:text-xs md:font-bold">Problems Solved:</span> {data.problemsSolved}
         </p>
 
         <a
           href="https://leetcode.com/u/Prabhat_007/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-400 hover:underline mt-auto flex items-center gap-2"
+          className="text-blue-400 hover:underline mt-auto flex items-center gap-2 max-md:text-xs"
         >
           <FaExternalLinkAlt /> View Profile
         </a>
       </div>
-      <div className="absolute right-0 top-0 h-full pr-6 flex items-center">
-        <SiLeetcode className="text-orange-500 md:text-[6rem] text-[4rem]" />
+      <div className="absolute right-2 top-2 md:right-6 md:top-6 h-full flex items-center">
+        <SiLeetcode className="text-orange-500 text-[6rem] md:text-[6rem]" />
       </div>
     </div>
   );

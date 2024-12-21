@@ -38,7 +38,7 @@ const Experience = () => {
   const [hoveredTech, setHoveredTech] = useState(null);
 
   return (
-    <div id="experience" className="p-10 md:p-24">
+    <div id="experience" className="p-6 md:p-24">
       {/* Static Heading */}
       <h1 className="text-2xl md:text-4xl text-white font-bold mb-10">
         Experience

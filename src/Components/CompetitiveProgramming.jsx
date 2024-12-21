@@ -1,28 +1,76 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import CodeforcesProfile from "./CpProfiles/CodeforcesProfile";
 import CodeChefProfile from "./CpProfiles/CodeChefProfile";
 import LeetCodeProfile from "./CpProfiles/LeetCodeProfile";
 import { motion } from "framer-motion";
 
 const CompetitiveProgramming = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div id="CompetitiveProgramming" className="p-6 md:p-24 text-white md:max-h-screen mb-9">
-      <h1 className="text-2xl md:text-4xl font-bold mb-10">Competitive Programming Profiles</h1>
-      <motion.div
-        className="grid grid-cols-1 xl:grid-cols-3 gap-6"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={{
-          hidden: { opacity: 0, y: 50 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        transition={{ duration: 0.5 }}
-      >
-        <CodeforcesProfile />
-        <CodeChefProfile />
-        <LeetCodeProfile />
-      </motion.div>
+    <div
+      id="CompetitiveProgramming"
+      ref={sectionRef}
+      className="p-6 md:p-24 text-white md:max-h-screen md:mb-9"
+    >
+      {/* Heading with dynamic text */}
+      <h1 className="text-2xl md:text-4xl font-bold mb-4 md:mb-10">
+        <span className="block md:hidden">CP Profiles</span>
+        <span className="hidden md:block">Competitive Programming Profiles</span>
+      </h1>
+      
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
+        {/* Codeforces Profile */}
+        <motion.div
+          initial={{ x: -50, opacity: 0 }}
+          animate={isVisible ? { x: 0, opacity: 1 } : { x: -50, opacity: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          <CodeforcesProfile />
+        </motion.div>
+
+        {/* CodeChef Profile */}
+        <motion.div
+          initial={{ x: -50, opacity: 0 }}
+          animate={isVisible ? { x: 0, opacity: 1 } : { x: -50, opacity: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          <CodeChefProfile />
+        </motion.div>
+
+        {/* LeetCode Profile */}
+        <motion.div
+          initial={{ x: -50, opacity: 0 }}
+          animate={isVisible ? { x: 0, opacity: 1 } : { x: -50, opacity: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        >
+          <LeetCodeProfile />
+        </motion.div>
+      </div>
     </div>
   );
 };

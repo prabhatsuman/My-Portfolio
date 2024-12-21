@@ -8,7 +8,7 @@ import CompetitiveProgramming from "./Components/CompetitiveProgramming";
 import Projects from "./Components/Projects";
 import Footer from "./Components/Footer";
 import "./App.css";
-
+import "./index.css";
 
 
 function App() {
