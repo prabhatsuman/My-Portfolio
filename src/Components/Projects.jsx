@@ -121,7 +121,7 @@ const Projects = () => {
       title: "Random Chat Platform",
       description:
         "An anonymous chat platform with real-time messaging using WebSockets, interest-based matching, and Redis caching.",
-      demoLink: "https://github.com/prabhatsuman/RandomChat",
+      demoLink: "http://randomchat.publicvm.com",
       sourceLink: "https://github.com/prabhatsuman/RandomChat",
       techKey: "chat",
     },
@@ -129,7 +129,7 @@ const Projects = () => {
       title: "Duck Farm Management System",
       description:
         "A system to manage multi-farm data, including egg collection, sales, and dealer operations. Features dashboards, filtering, and JWT-secured APIs.",
-      demoLink: "https://www.duckfarm.run.place",
+      demoLink: "http://www.duckfarm.linkpc.net",
       sourceLink: "https://github.com/prabhatsuman/DuckFarm",
       techKey: "farm",
     },

@@ -4,7 +4,8 @@ import CodeChefProfile from "./CpProfiles/CodeChefProfile";
 import LeetCodeProfile from "./CpProfiles/LeetCodeProfile";
 import { motion } from "framer-motion";
 
-const CompetitiveProgramming = () => {
+const CompetitiveProgramming = ({codeforcesData,codechefData,leetcodeData}) => {
+  
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
@@ -50,7 +51,9 @@ const CompetitiveProgramming = () => {
           animate={isVisible ? { x: 0, opacity: 1 } : { x: -50, opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <CodeforcesProfile />
+          <CodeforcesProfile
+            codeforcesData={codeforcesData}
+           />
         </motion.div>
 
         {/* CodeChef Profile */}
@@ -59,7 +62,9 @@ const CompetitiveProgramming = () => {
           animate={isVisible ? { x: 0, opacity: 1 } : { x: -50, opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <CodeChefProfile />
+          <CodeChefProfile
+            codechefData={codechefData}
+           />
         </motion.div>
 
         {/* LeetCode Profile */}
@@ -68,7 +73,9 @@ const CompetitiveProgramming = () => {
           animate={isVisible ? { x: 0, opacity: 1 } : { x: -50, opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <LeetCodeProfile />
+          <LeetCodeProfile
+            leetcodeData={leetcodeData}
+           />
         </motion.div>
       </div>
     </div>

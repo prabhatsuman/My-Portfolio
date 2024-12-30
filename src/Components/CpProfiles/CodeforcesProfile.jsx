@@ -2,23 +2,23 @@ import React from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { SiCodeforces } from "react-icons/si";
 
-const CodeforcesProfile = () => {
-  // Data extracted from the template in the image
+const CodeforcesProfile = ({codeforcesData}) => {
+ 
   const data = {
-    username: "Prabhat_007",
-    title: "Specialist",
-    maxTitle: "Specialist",
-    contestRating: 1541,
-    maxContestRating: 1541,
-    ratedContests: 88,
-    problemsSolved: 885,
+    username: codeforcesData.username,
+    title: codeforcesData.title.charAt(0).toUpperCase() + codeforcesData.title.slice(1),
+    maxTitle: codeforcesData.maxTitle,
+    contestRating: codeforcesData.contestRating,
+    maxContestRating: codeforcesData.maxContestRating,
+    ratedContests: codeforcesData.ratedContests,
+    problemsSolved: codeforcesData.problemsSolved,
   };
 
   return (
     <div className="flex bg-[#0c0e19] shadow-xl shadow-slate-900 rounded-2xl bg-opacity-40 md:p-6 text-white relative">
       <div className="flex flex-col gap-0.5 md:gap-4 mb-1">
         <h2 className="text-sm md:text-2xl font-semibold">{data.username}</h2>
-        <p className="text-cyan-300 max-md:text-sm">
+        <p className="text-cyan-300 max-md:text-sm md:text-xl">
           {data.title} (max: {data.maxTitle})
         </p>
         <p>
