@@ -129,7 +129,7 @@ const Projects = () => {
       title: "Duck Farm Management System",
       description:
         "A system to manage multi-farm data, including egg collection, sales, and dealer operations. Features dashboards, filtering, and JWT-secured APIs.",
-      demoLink: "http://www.duckfarm.linkpc.net",
+      demoLink: "http://duckfarm.linkpc.net",
       sourceLink: "https://github.com/prabhatsuman/DuckFarm",
       techKey: "farm",
     },
