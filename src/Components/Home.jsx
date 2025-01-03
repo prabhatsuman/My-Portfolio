@@ -55,12 +55,22 @@ const Home = () => {
           <span className="text-green-400">{text}</span>
           <span className="text-white blink-cursor">|</span>
         </h1>
-        <a
-          href="mailto:mr.prabhatsuman@gmail.com"
-          className="mt-5 md:mt-10 text-white py-2 px-4 text-xs sm:text-sm md:text-lg hover:opacity-85 duration-300 hover:scale-105 font-semibold rounded-3xl bg-[#465697] inline-block"
-        >
-          Contact Me
-        </a>
+        <div className="flex justify-center md:justify-start items-center mt-5 md:mt-10 space-x-4">
+          <a
+            href="mailto:mr.prabhatsuman@gmail.com"
+            className="text-white py-2 px-4 text-xs sm:text-sm md:text-lg hover:opacity-85 duration-300 hover:scale-105 font-semibold rounded-3xl bg-[#465697] inline-block"
+          >
+            Contact Me
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1wLOc1gQ1K5im1ooAoeZCzKLYTXRTb9MM/view?usp=sharing" // Update this link to your actual resume URL
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white py-2 px-4 text-xs sm:text-sm md:text-lg hover:opacity-85 duration-300 hover:scale-105 font-semibold rounded-3xl bg-[#28a745] inline-block"
+          >
+            View Resume
+          </a>
+        </div>
       </div>
     </div>
   );
